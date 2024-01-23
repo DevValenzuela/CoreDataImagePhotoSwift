@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lge-BF-Mzc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fotos-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FotosCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-Qt-z9j">
+                                <rect key="frame" x="0.0" y="64" width="375" height="273"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kND-II-vTY">
+                                <rect key="frame" x="144" y="425" width="86" height="30"/>
+                                <state key="normal" title="guardar"/>
+                                <connections>
+                                    <action selector="guardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5s-DN-UjX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zw6-Fu-kCt">
+                                <rect key="frame" x="16" y="369" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-P0-Unv">
+                                <rect key="frame" x="154" y="485" width="66" height="30"/>
+                                <state key="normal" title="ver fotos"/>
+                                <connections>
+                                    <segue destination="ida-VE-em2" kind="show" id="7de-mq-1b9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zue-P0-Unv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="2bK-hb-eWT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CXc-Qt-z9j" secondAttribute="bottom" constant="330" id="92y-Sd-u1i"/>
+                            <constraint firstItem="CXc-Qt-z9j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9YW-ph-MEF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zw6-Fu-kCt" secondAttribute="trailing" constant="16" id="GYf-Fn-tcI"/>
+                            <constraint firstItem="kND-II-vTY" firstAttribute="top" secondItem="Zw6-Fu-kCt" secondAttribute="bottom" constant="26" id="H8w-BP-SMb"/>
+                            <constraint firstItem="CXc-Qt-z9j" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JwN-Sh-RoI"/>
+                            <constraint firstItem="kND-II-vTY" firstAttribute="top" secondItem="Zw6-Fu-kCt" secondAttribute="bottom" constant="26" id="LdT-gr-Adr"/>
+                            <constraint firstItem="Zw6-Fu-kCt" firstAttribute="top" secondItem="CXc-Qt-z9j" secondAttribute="bottom" constant="32" id="QoZ-9u-ueq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kND-II-vTY" secondAttribute="trailing" constant="145" id="Tm2-eo-MVb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kND-II-vTY" secondAttribute="bottom" constant="212" id="V3O-Rw-Qda"/>
+                            <constraint firstItem="kND-II-vTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="Zsh-7s-y7f"/>
+                            <constraint firstItem="CXc-Qt-z9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aBC-vI-0eB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zue-P0-Unv" secondAttribute="trailing" constant="155" id="c5B-rv-TW7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zue-P0-Unv" secondAttribute="bottom" constant="152" id="cKU-pa-TIT"/>
+                            <constraint firstItem="Zw6-Fu-kCt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u5g-wa-9ti"/>
+                            <constraint firstItem="Zue-P0-Unv" firstAttribute="top" secondItem="kND-II-vTY" secondAttribute="bottom" constant="30" id="uUj-ar-HO8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fotos" id="NNO-Qe-zmr">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="0Pq-aa-k0o">
+                                <connections>
+                                    <action selector="camara:" destination="BYZ-38-t0r" id="pmH-X2-vGt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="photo.on.rectangle" catalog="system" id="u9O-W6-HQE">
+                                <connections>
+                                    <action selector="galeria:" destination="BYZ-38-t0r" id="OI9-hf-7hg"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imagen" destination="CXc-Qt-z9j" id="R62-rq-uF2"/>
+                        <outlet property="nombre" destination="Zw6-Fu-kCt" id="tEt-MJ-oMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.80000000000001" y="153.37331334332833"/>
+        </scene>
+        <!--Imagenes Table View Controller-->
+        <scene sceneID="LYU-Sr-3YW">
+            <objects>
+                <tableViewController id="ida-VE-em2" customClass="ImagenesTableViewController" customModule="FotosCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2mW-2M-av8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="7Vk-fm-E6J">
+                                <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Vk-fm-E6J" id="OZe-u3-vAZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ida-VE-em2" id="Lhv-PE-mrz"/>
+                            <outlet property="delegate" destination="ida-VE-em2" id="2a8-rx-4f8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gi-EK-dFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="159"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fs7-HW-nta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lge-BF-Mzc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mKk-Ku-tqN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bUX-41-DQS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wm0-9H-r7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
